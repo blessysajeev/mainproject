@@ -1,0 +1,56 @@
+{% load static %}
+<html>
+    <head>
+        <title>cars</title>
+    </head>
+    <body>
+        
+        <link href="{% static 'css/cars.css' %}" rel='stylesheet'>
+        <ul class="card-list">
+	{% for i in result %}
+            <li class="card">
+                <a class="card-image" href="{{i.image1.url}}" target="_blank" style="background-image: url({{i.image1.url}});" data-image-full="{{i.image1.url}}">
+                    <img src="{{i.image1.url}}" alt="Psychopomp" />
+                </a>
+                <a class="card-description" href="#" target="_blank">
+                    <h2>{{i.name}}</h2>
+                    <p>{{i.description}}</p>
+                    <h5>ex-showroom price:{{i.price}}lakh</h5>
+                    <button href="{% url 'singleCars' %}">book your dream vehicle</button>
+                </a>
+            </li>
+            {% endfor %}
+            <!-- <li class="card">
+                <a class="card-image" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-500.jpg">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg" alt="let's go" />
+                </a>
+                <a class="card-description" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank">
+                    <h2>let's go</h2>
+                    <p>In Love With A Ghost</p>
+                </a>
+            </li>
+            
+            <li class="card">
+                <a class="card-image" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg" alt="The Beautiful Game" />
+                </a>
+                <a class="card-description" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank">
+                    <h2>The Beautiful Game</h2>
+                    <p>Vulfpeck</p>
+                </a>
+            </li>
+            
+            <li class="card">
+                <a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-500.jpg">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
+                </a>
+                <a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
+                    <h2>Jane Doe</h2>
+                    <p>Converge</p>
+                </a>
+            </li> -->
+            
+        </ul>
+        <script src="{% static 'js/cars.js' %}"></script>
+    </body>
+</html>

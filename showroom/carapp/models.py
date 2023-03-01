@@ -50,7 +50,7 @@ class test_drive(models.Model):
     venue = models.CharField(max_length=100,null=True)
     carmodel = models.CharField(max_length=100,null=True)
     Contact = models.BigIntegerField(default=0)
-    Email = models.EmailField(max_length=100,unique=True)
+    Email = models.EmailField(max_length=100,null=True)
     testdate = models.DateField(null=True, auto_now_add=False)
     testtime = models.TimeField(null=True, blank=True)
 

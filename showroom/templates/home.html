@@ -55,10 +55,13 @@
               <a class="nav-link" href="{% url 'cars' %}">cars</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">my booking</a>
+              <a class="nav-link" href="{% url 'testview' %}">my booking</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'login' %}" class="nav-link">welcome {{request.session.username}}</a>
+                <a href="#" class="nav-link">welcome {{request.session.username}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">Logout</a>
             </li>
             <!-- <li class="nav-item dropdown">
 

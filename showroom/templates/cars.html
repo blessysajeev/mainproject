@@ -16,7 +16,8 @@
                     <h2>{{i.name}}</h2>
                     <p>{{i.description}}</p>
                     <h5>ex-showroom price:{{i.price}}lakh</h5>
-                    <button href="{% url 'singleCars' %}">book your dream vehicle</button>
+                    <!-- <button href="#">book your dream vehicle</button> -->
+                    <p class="d-flex mb-0 d-block"> <a href="{% url 'singleCar' i.id %}" class="btn btn-secondary py-2 ml-1">Explore</a></p>
                 </a>
             </li>
             {% endfor %}

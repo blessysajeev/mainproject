@@ -123,3 +123,14 @@ def singleCar(request, id):
         'lst':lst
     }
     return render(request, 'singleCar.html',context)
+
+def testview(request):
+    obj=test_drive.objects.all()
+    # context={'info':obj}
+    return render(request,'testview.html',
+    {'obj':obj})
+
+def delete(request,id):
+    appoimnt_info=test_drive.objects.get(id=id)
+    appoimnt_info.delete()
+    return redirect('testview')
